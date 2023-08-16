@@ -11,19 +11,18 @@ public class Exercise001 {
         Concatenate capitaliseFirstChar and inputSubString and return.
     */
     public String capitalizeWord(String word) {
-        char capitaliseFirstChar = Character.toUpperCase(word.charAt(0));
-        String inputSubString = word.substring(1);
-        return capitaliseFirstChar + inputSubString;
+        return Character.toUpperCase(word.charAt(0)) + word.substring(1);
     }
 
     /*
     Get first char of firstName and lastName which are the initials.
-    Concatenate firstInitial, . and lastInitial and return
+    Concatenate firstInitial . and lastInitial and return
      */
     public String generateInitials(String firstName, String lastName) {
-        char firstInitial = firstName.charAt(0);
-        char lastInitial = lastName.charAt(0);
-        return firstInitial+"."+lastInitial;
+        //char firstInitial = firstName.charAt(0);
+        //char lastInitial = lastName.charAt(0);
+        //return firstInitial+"."+lastInitial;
+        return fi
     }
 
     /*
@@ -39,7 +38,7 @@ public class Exercise001 {
 
     /*
     Declare a StringBuilder object by passing sentence to its constructor.
-    Call reverse() method and convertback to String and return
+    Call reverse() method and convert back to String and return
      */
     public String reverse(String sentence) {
         StringBuilder sb = new StringBuilder(sentence);

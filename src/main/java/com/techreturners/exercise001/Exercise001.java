@@ -38,8 +38,7 @@ public class Exercise001 {
     Call reverse() method and convert back to String and return
      */
     public String reverse(String sentence) {
-        StringBuilder sb = new StringBuilder(sentence);
-        return sb.reverse().toString();
+        return new StringBuilder(sentence).reverse().toString();
     }
 
     /*

@@ -1,5 +1,6 @@
 package com.techreturners.exercise001;
 
+import java.nio.file.DirectoryStream;
 import java.util.List;
 import java.text.DecimalFormat;
 
@@ -42,16 +43,14 @@ public class Exercise001 {
     }
 
     /*
-    Loop through each User object. Check type of User object if it is
-    "Linux" increase linuxCount and return
+    Uses lambda function to stream users list of User object. Uses filter
+    method and checks if user.getType() is Linux if so the count() method
+    is called to get count of all users who have type Linux. Cast to int
+    needed as count returns long
      */
     public int countLinuxUsers(List<User> users) {
-        int linuxCount = 0;
-        for (User user : users){
-            if (user.getType().equals("Linux")){
-                linuxCount ++;
-            }
-        }
-        return linuxCount;
+         return (int) users.stream()
+                 .filter(user -> user.getType().equals("Linux"))
+                 .count();
     }
 }

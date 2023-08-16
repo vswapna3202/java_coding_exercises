@@ -19,10 +19,7 @@ public class Exercise001 {
     Concatenate firstInitial . and lastInitial and return
      */
     public String generateInitials(String firstName, String lastName) {
-        //char firstInitial = firstName.charAt(0);
-        //char lastInitial = lastName.charAt(0);
-        //return firstInitial+"."+lastInitial;
-        return fi
+        return firstName.charAt(0)+"."+lastName.charAt(0);
     }
 
     /*

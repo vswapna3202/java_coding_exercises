@@ -4,13 +4,10 @@ public class Exercise002 {
 
     /*
     This method checks if the Person passed to this method is from
-    city Machester or not by invoking getCity() method on person
+    city Manchester or not by invoking getCity() method on person
      */
     public boolean isFromManchester(Person person) {
-        if (person.getCity().equals("Manchester"))
-            return true;
-        else
-            return false;
+        return person.getCity().equals("Manchester");
     }
 
     /*
@@ -18,10 +15,7 @@ public class Exercise002 {
     If age is >= ageLimit return True else return false
      */
     public boolean canWatchFilm(Person person, int ageLimit) {
-        if (person.getAge() >= ageLimit)
-            return true;
-        else
-            return false;
+        return person.getAge() >= ageLimit;
     }
     
 }

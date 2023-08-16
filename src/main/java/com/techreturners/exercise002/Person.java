@@ -17,23 +17,12 @@ public class Person {
         this.age = age;
     }
 
-    //Returns the firstName of the person
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    //Returns the lastName of the person
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    //Returns the city of the person
     public String getCity() {
-        return this.city;
+        return city;
     }
 
-    //Returns age of the person
+
     public int getAge() {
-        return this.age;
+        return age;
     }
 }

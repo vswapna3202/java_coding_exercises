@@ -1,10 +1,9 @@
 package com.techreturners.exercise003;
 
 public class Exercise003 {
-    private int iceCreamCode;
-    private String[] iceCreamFlavours;
+    private final String[] iceCreamFlavours;
 
-    // Constructor which initialises iceCreamFlavours String list to all icecream
+    // Constructor which initialises iceCreamFlavours String list to all ice cream
     //flavours
     public Exercise003(){
         iceCreamFlavours = new String[] { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
@@ -16,14 +15,15 @@ public class Exercise003 {
     not exist then code of -1 is returned.
      */
     int getIceCreamCode(String iceCreamFlavour) {
-
         if (iceCreamFlavour == null || iceCreamFlavour.isEmpty()){
             return -1;
         }
-        for (int i=0;i<this.iceCreamFlavours.length;i++){
-            this.iceCreamCode = i;
-            if (this.iceCreamFlavours[i].toLowerCase().equals(iceCreamFlavour.toLowerCase()))
-                return this.iceCreamCode;
+
+        int index = 0;
+        for (String creamFlavour : iceCreamFlavours) {
+            if (creamFlavour.equalsIgnoreCase(iceCreamFlavour))
+                return index;
+            index++;
         }
         return -1;
     }
@@ -32,5 +32,4 @@ public class Exercise003 {
     String[] iceCreamFlavours() {
         return iceCreamFlavours;
     }
-
 }

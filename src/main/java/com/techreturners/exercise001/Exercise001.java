@@ -1,8 +1,7 @@
 package com.techreturners.exercise001;
 
-import java.nio.file.DirectoryStream;
-import java.util.List;
 import java.text.DecimalFormat;
+import java.util.List;
 
 public class Exercise001 {
     /*

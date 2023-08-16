@@ -58,9 +58,8 @@ public class Exercise003Test {
      */
     @Test
     public void checkGetIceCreamCodeIsEmpty() {
-        String iceCreamFlavour = "";
         int expected = -1;
-        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+        assertEquals(expected, ex003.getIceCreamCode(""));
     }
 
     /*
@@ -68,7 +67,7 @@ public class Exercise003Test {
     null
      */
     @Test
-    public void checkGetIceCreamCodeIsNull() {
+    public void checkGetIceCreamCodeWhenIceCreamFlavourISNull() {
         int expected = -1;
         assertEquals(expected, ex003.getIceCreamCode(null));
     }

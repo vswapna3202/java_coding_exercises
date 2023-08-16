@@ -24,7 +24,7 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Disabled("You can remove this @Disabled annotation to run the test")
+
     @Test
     public void checkGetIceCreamCodeForMangoSorbet() {
         String iceCreamFlavour = "Mango Sorbet";
@@ -33,7 +33,6 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Disabled("You can remove this @Disabled annotation to run the test")
     @Test
     public void checkGetIceCreamCodeForRaspberryRipple() {
         String iceCreamFlavour = "Raspberry Ripple";
@@ -42,7 +41,71 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Disabled("You can remove this @Disabled annotation to run the test")
+    @Test
+    /*
+    Added test case if the flavour is not in iceCreamFlavourList
+    return iceCreamCode as -1
+     */
+    public void checkGetIceCreamCodeForBubbleGumBerry() {
+        String iceCreamFlavour = "BubbleGum Berry";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    /*
+    This method checks if iceCreamFlavour is empty a code of -1
+    is returned.
+     */
+    @Test
+    public void checkGetIceCreamCodeIsEmpty() {
+        String iceCreamFlavour = "";
+        int expected = -1;
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    /*
+    This method checks the iceCreamCode is -1 when iceCreamFlavour is
+    null
+     */
+    @Test
+    public void checkGetIceCreamCodeIsNull() {
+        int expected = -1;
+        assertEquals(expected, ex003.getIceCreamCode(null));
+    }
+
+    /*
+    This method asserts the iceCreamCode for Pistachio flavour
+     */
+    @Test
+    public void checkGetIceCreamCodeForPistachio() {
+        String iceCreamFlavour = "Pistachio";
+        int expected = 0;
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    /*
+    This method asserts the iceCreamCode for Vanilla flavour though it
+    was entered in all uppercase
+     */
+    @Test
+    public void checkGetIceCreamCodeForVanillaInUpperCase() {
+        String iceCreamFlavour = "VANILLA";
+        int expected = 2;
+        assertEquals(expected,ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    /*
+    This method asserts the iceCreamCode for Chocolate flavour
+    though it was entered in all lowercase
+     */
+    @Test
+    public void checkGetIceCreamCodeForChocolateInLowerCase(){
+        String iceCreamFlavour = "chocolate";
+        int expected = 4;
+        assertEquals(expected,ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
     @Test
     public void checkPickMultipleIceCreamFlavours() {
 

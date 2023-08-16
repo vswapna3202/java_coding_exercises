@@ -56,61 +56,36 @@ public class Exercise005Test {
         assertTrue(ex005.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs"));
     }
 
-    /*
-    This method asserts if a sentence with 50 letters is a Pangram
-     */
     @Test
     public void checkSentenceWith50LettersIsAPangram(){
         assertTrue(ex005.isPangram("The wizard quickly jinxed the gnomes before they vaporized."));
     }
 
-    /*
-    This method asserts if a sentence with special characters is a Pangram
-     */
     @Test
     public void checkSentenceWithSpecialCharacterIsAPangram(){
         assertTrue(ex005.isPangram("The%wizard_quickly&jinxed£the/gnomes<before>they%vaporized."));
     }
 
-    /*
-    This method asserts if a sentence with only numbers is not a Pangram
-     */
     @Test
     public void checkSentenceWithOnlyNumbersIsNotAPangram(){
         assertFalse(ex005.isPangram("1234567890"));
     }
 
-    /*
-    This method asserts whether a sentence without letter A, a is
-    not a pangram
-     */
     @Test
     public void checkSentenceWithoutAIsNotAPangram(){
         assertFalse(ex005.isPangram(" quivering Texs zombie fought republic linked jewelry."));
     }
 
-    /*
-    This method asserts whether a sentence which is null is not a
-    pangram
-     */
     @Test
     public void checkSentenceWhichIsNullIsNotAPangram(){
         assertFalse(ex005.isPangram(null));
     }
 
-    /*
-    This method asserts if a sentence without space and only letters
-    is a pangram
-     */
     @Test
     public void checkSentenceWithoutSpaceIsAPangram(){
         assertTrue(ex005.isPangram("Ficklejinxbogdwarvesspymathquiz"));
     }
 
-    /*
-    This method asserts if a sentence with uppercase and lowercase
-    letters and numbers is a pangram
-     */
     @Test
     public void checkSentenceWithUpperLowerAndNumbersIsAPangram(){
         assertTrue(ex005.isPangram("All 1 QUESTION 2 asked BY 3 five 4 watched exPErts amAze the JUDGE."));

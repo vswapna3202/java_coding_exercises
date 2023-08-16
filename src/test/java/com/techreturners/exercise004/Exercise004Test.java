@@ -58,6 +58,17 @@ public class Exercise004Test {
     }
 
     /*
+    This method checks gigaSecond addition when dateTime is in
+    future with year spilling to five digits
+     */
+    @Test
+    public void checkGetDDateTimeWhenBothDateAndTimeInFutureYearInFiveDigits() {
+        Exercise004 ex004 = new Exercise004(LocalDateTime.of(9999,12,31,23,59, 59));
+        LocalDateTime expected = LocalDateTime.of(10031,9,9,1,46,39);
+        assertEquals(expected,ex004.getDateTime());
+    }
+
+    /*
     This method checks gigaSecond addition when dateTime is just
     about to be year 2000
      */

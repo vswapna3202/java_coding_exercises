@@ -1,5 +1,7 @@
 package com.techreturners.exercise003;
 
+import java.util.stream.IntStream;
+
 public class Exercise003 {
     private final String[] iceCreamFlavours;
 
@@ -15,18 +17,13 @@ public class Exercise003 {
     not exist then code of -1 is returned.
      */
     int getIceCreamCode(String iceCreamFlavour) {
-        if (iceCreamFlavour == null || iceCreamFlavour.isEmpty()){
-            return -1;
-        }
-
-        int index = 0;
-        for (String creamFlavour : iceCreamFlavours) {
-            if (creamFlavour.equalsIgnoreCase(iceCreamFlavour))
-                return index;
-            index++;
-        }
-        return -1;
+        int index = IntStream.range(0, iceCreamFlavours.length)
+                .filter(i -> iceCreamFlavours[i].equalsIgnoreCase(iceCreamFlavour))
+                .findFirst()
+                .orElse(-1);
+        return index;
     }
+
 
     // Returns list of all iceCreamFlavours
     String[] iceCreamFlavours() {

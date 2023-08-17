@@ -17,11 +17,10 @@ public class Exercise003 {
     not exist then code of -1 is returned.
      */
     int getIceCreamCode(String iceCreamFlavour) {
-        int index = IntStream.range(0, iceCreamFlavours.length)
+        return IntStream.range(0, iceCreamFlavours.length)
                 .filter(i -> iceCreamFlavours[i].equalsIgnoreCase(iceCreamFlavour))
                 .findFirst()
                 .orElse(-1);
-        return index;
     }
 
 
